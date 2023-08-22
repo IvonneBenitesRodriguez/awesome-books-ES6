@@ -8,7 +8,33 @@
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
+    <header>
+        <h1>My Beautiful Library</h1>
+        <nav>
+            <span><a href="#">Sanrio Bookstore</a></span>
+            <ul class="navbar">
+                <li><a href="#">Booklist</a></li>
+                <li><a href='./html/addBook.html'>Add a Book</a></li>
+                <li><a href='/html/contact'>Contact</a></li>
+            </ul>
+        </nav>
+</header>
+
+    <span id="timeDisplay"></span>
+    <table id="bookList"></table>
+
+    <form id="bookForm">
+            <input type="text" id="title" required placeholder="Title">
+            <input type="text" id="author" required placeholder="Author">
+            <button type="submit">Add</button>
+        </form>
+
+<footer>
+    <p>Copyright @ivonnebenites projects</p>
+</footer>
+
+
     
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 </html>

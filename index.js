@@ -1,6 +1,6 @@
 import BookCollection from './modules/app.js';
 import AppBookCollection from './modules/display.js';
-// import { DateTime } from '../node_modules/luxon/src/luxon.js';
+
 import { updateTimeDisplay } from './modules/time.js';
 
 const bookCollection = new BookCollection();

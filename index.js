@@ -1,7 +1,8 @@
+import { DateTime } from './modules/luxon.js';
 import BookCollection from './modules/app.js';
 import AppBookCollection from './modules/display.js';
 
-import { updateTimeDisplay } from './modules/time.js';
+// import { updateTimeDisplay } from './modules/time.js';
 
 const bookCollection = new BookCollection();
 const appBookCollection = new AppBookCollection();
@@ -29,13 +30,14 @@ addButton.addEventListener('click', (event) => {
     appBookCollection.displayBooks();
   }
 });
-
 // creating a Luxon Datetime instance
-
-// Formatting the date as a string
-
+const updateTimeDisplay = () => {
+  const timeDisplay = document.getElementById('timeDisplay');
+  const currentDate = DateTime.now();
+  // Formatting the date as a string
+  const formattedDate = currentDate.toLocaleString(DateTime.DATETIME_FULL);
+  timeDisplay.textContent = formattedDate;
+};
+// updateTimeDisplay();
 updateTimeDisplay();
-
-setInterval(() => {
-  updateTimeDisplay();
-}, 1000);
+setInterval(updateTimeDisplay, 1000);
